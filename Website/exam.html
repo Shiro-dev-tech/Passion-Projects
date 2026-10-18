@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CCST Networking Practice Exam</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="exam-topbar">
+
+        <div class="exam-title">
+
+            <strong>
+                CCST Networking
+            </strong>
+
+            <span>
+                Practice Exam
+            </span>
+
+        </div>
+
+
+        <div class="audio-controls">
+
+            <button
+                id="music-toggle"
+                type="button"
+                onclick="toggleMusic()"
+            >
+                ♫ Music ON
+            </button>
+
+            <button
+                id="sound-toggle"
+                type="button"
+                onclick="toggleSounds()"
+            >
+                ♪ SFX ON
+            </button>
+
+        </div>
+
+
+        <div class="timer-box">
+
+            Time Remaining:
+
+            <strong id="timer">
+                50:00
+            </strong>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         EXAM
+    ========================== -->
+
+    <div class="exam-layout">
+
+
+        <!-- QUESTION PANEL -->
+
+        <main class="question-panel">
+
+
+            <div class="question-info">
+
+                <span id="question-number">
+                    Question 1
+                </span>
+
+
+                <button
+                    id="flag-button"
+                    class="flag-button"
+                    type="button"
+                    onclick="toggleFlag()"
+                >
+                    ⚑ Flag for Review
+                </button>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="question-content">
+
+
+                <p
+                    id="question-instruction"
+                    class="question-instruction"
+                >
+                    Select the best answer.
+                </p>
+
+
+                <!-- EXHIBIT BUTTON -->
+
+                <div
+                    id="exhibit-button-container"
+                    class="exhibit-button-container"
+                    style="display: none;"
+                >
+
+                    <button
+                        type="button"
+                        class="exhibit-button"
+                        onclick="openExhibit()"
+                    >
+                        ◉ VIEW EXHIBIT
+                    </button>
+
+                </div>
+
+
+                <h2 id="question-text">
+                    Loading question...
+                </h2>
+
+
+                <div id="answer-container">
+                </div>
+
+            </div>
+
+
+            <!-- PREVIOUS / NEXT -->
+
+            <div class="exam-controls">
+
+                <button
+                    id="previous-button"
+                    type="button"
+                    onclick="previousQuestion()"
+                >
+                    ← Previous
+                </button>
+
+
+                <button
+                    id="next-button"
+                    type="button"
+                    onclick="nextQuestion()"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </main>
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="question-sidebar">
+
+            <h3>
+                Questions
+            </h3>
+
+
+            <div id="question-grid">
+            </div>
+
+
+            <div class="legend">
+
+                <div>
+                    <Answered:
+                    <strong id="answered-count">0</strong>
+                </div>
+
+                <div>
+                    Flagged:
+                    <strong id="flagged-count">0</strong>
+                </div>
+
+                <div>
+                    Unanswered:
+                    <strong id="unanswered-count">84</strong>
+                </div>
+
+            </div>
+
+
+            <button
+                class="submit-button"
+                type="button"
+                onclick="submitExam(false)"
+            >
+                Submit Exam
+            </button>
+
+        </aside>
+
+    </div>
+
+
+    <!-- =====================================
+         EXHIBIT OVERLAY
+    ====================================== -->
+
+    <div
+        id="exhibit-modal"
+        class="exhibit-modal"
+    >
+
+        <div class="exhibit-window">
+
+
+            <div class="exhibit-header">
+
+                <span>
+                    EXHIBIT
+                </span>
+
+                <button
+                    type="button"
+                    onclick="closeExhibit()"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div class="exhibit-content">
+
+                <img
+                    id="exhibit-image"
+                    src=""
+                    alt="Question exhibit"
+                >
+
+            </div>
+
+
+            <div class="exhibit-footer">
+
+                <button
+                    type="button"
+                    onclick="closeExhibit()"
+                >
+                    CLOSE EXHIBIT
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/questions.js"></script>
+
+    <script src="js/exam.js"></script>
+
+    <script src="js/audio.js"></script>
+
+</body>
+
+</html>

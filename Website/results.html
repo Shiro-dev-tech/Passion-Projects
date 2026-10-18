@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CCST Networking Results
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body class="results-page">
+
+
+    <div class="results-container">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <div class="exam-header">
+
+            <h1>
+                CCST Networking
+            </h1>
+
+            <p>
+                Practice Exam Results
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             RESULTS
+        ========================== -->
+
+        <div class="results-content">
+
+
+            <!-- PASS / FAIL -->
+
+            <div
+                id="result-status"
+                class="result-status"
+            >
+                Exam Complete
+            </div>
+
+
+
+            <!-- SCORE -->
+
+            <div class="score-display">
+
+                <p>
+                    Your Practice Score
+                </p>
+
+
+                <h1 id="scaled-score">
+                    ---
+                </h1>
+
+
+                <span>
+                    out of 1000
+                </span>
+
+            </div>
+
+
+
+<!-- =========================
+     RESULT SUMMARY
+========================== -->
+
+<div class="result-summary">
+
+    <div>
+        <strong id="correct-count">
+            0
+        </strong>
+
+        <span>
+            Correct
+        </span>
+    </div>
+
+
+    <div>
+        <strong id="incorrect-count">
+            0
+        </strong>
+
+        <span>
+            Incorrect
+        </span>
+    </div>
+
+
+    <div>
+        <strong id="unanswered-count">
+            0
+        </strong>
+
+        <span>
+            Unanswered
+        </span>
+    </div>
+
+
+    <div>
+        <strong id="unscored-count">
+            0
+        </strong>
+
+        <span>
+            Unscored
+        </span>
+    </div>
+
+
+    <div>
+        <strong id="percentage">
+            0%
+        </strong>
+
+        <span>
+            Percentage
+        </span>
+    </div>
+
+</div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="result-buttons">
+
+
+                <button
+                    type="button"
+                    onclick="retakeExam()"
+                >
+                    ↻ Retake Exam
+                </button>
+
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    onclick="toggleReview()"
+                >
+                    Review Answers
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ANSWER REVIEW -->
+
+            <div
+                id="review-container"
+                class="review-container"
+            >
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/results.js"></script>
+
+    <script src="js/results-audio.js"></script>
+
+
+</body>
+
+</html>
